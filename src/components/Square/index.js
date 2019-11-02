@@ -1,6 +1,12 @@
 import React from 'react';
+import './style.css';
 
-const Square = () => <button>X</button>
+
+function handleClick(e) {
+  console.log(e);
+}
+
+const Square = () => <button onClick={handleClick} className="square">X</button>
 
 
 export default Square;
