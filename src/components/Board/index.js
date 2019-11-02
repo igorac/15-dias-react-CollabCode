@@ -4,7 +4,7 @@ import './style.css';
 
 const Board = () => {
   return (
-    <div className="board">
+    <article className="board">
       <div className="board-row">
         <Square />
         <Square />
@@ -22,7 +22,7 @@ const Board = () => {
         <Square />
         <Square />
       </div>
-    </div>
+    </article>
   );
 }
 

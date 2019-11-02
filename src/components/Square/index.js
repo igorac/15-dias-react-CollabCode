@@ -3,7 +3,7 @@ import './style.css';
 
 
 function handleClick(e) {
-  console.log(e);
+  console.log('1');
 }
 
 const Square = () => <button onClick={handleClick} className="square">X</button>
