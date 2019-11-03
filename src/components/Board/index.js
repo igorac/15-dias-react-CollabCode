@@ -2,26 +2,22 @@ import React from 'react';
 import Square from '../Square';
 import './style.css';
 
-const Board = () => {
+
+const squareCollabs = qtd => {
+  let max = qtd;
+  const squares = [];
+
+  while(max--) {
+    squares.push(<Square  key={max}/>);
+  }
+
+  return squares;
+}
+
+const Board = ({qtd}) => {
   return (
     <article className="board">
-      <div className="board-row">
-        <Square />
-        <Square />
-        <Square />
-      </div>
-
-      <div className="board-row">
-        <Square />
-        <Square />
-        <Square />
-      </div>
-
-      <div className="board-row">
-        <Square />
-        <Square />
-        <Square />
-      </div>
+      {squareCollabs(qtd)}
     </article>
   );
 }
