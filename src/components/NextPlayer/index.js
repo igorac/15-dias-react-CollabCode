@@ -1,9 +1,9 @@
 import React from 'react';
 import './style.css';
 
-const NextPlayer = () => {
+const NextPlayer = ({player}) => {
   return (
-    <p className="next-player">Próximo Jogador: X</p>
+    <p className="next-player">Próximo Jogador: {player}</p>
   );
 }
 

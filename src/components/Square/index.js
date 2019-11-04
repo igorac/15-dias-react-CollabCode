@@ -2,9 +2,10 @@ import React from 'react';
 import './style.css';
 
 
-const Square = (props) => {
+// {content} => props.content
+const Square = ({content, onClick}) => {
   return (
-    <button onClick={props.onClickChange} className="square">{props.content}</button>
+    <button onClick={onClick} className="square">{content}</button>
   );
 }
 
