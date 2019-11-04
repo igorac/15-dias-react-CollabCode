@@ -12,7 +12,7 @@ class Board extends Component {
 
       return <Square 
               onClick={this.props.onClick}
-              // content={this.props.player} 
+              content={this.props.player} 
               key={index} />
     
     });

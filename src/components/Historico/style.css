@@ -1,0 +1,13 @@
+.historico {
+    margin-left: 10px;
+}
+.historico button {
+    border: none;
+    outline: none;
+    background-color: #6c5ce7;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}

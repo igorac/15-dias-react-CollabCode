@@ -1,3 +1,8 @@
 .game-wrapper {
     text-align: center;
 }
+
+.board-historico {
+    display: flex;
+    justify-content: center;
+}
