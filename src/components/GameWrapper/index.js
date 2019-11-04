@@ -21,7 +21,7 @@ class GameWrapper extends Component {
     })
   }
 
-  // o onClick do Board está utilizando o onClick do Square, então
+  // O onClick do Board está utilizando o onClick do Square, então
   // ao clicar no square, ele vai fazer o fluxo de dentro para fora
   // do component filho (square) -> (board) -> (GameWrapper)
   render() {
