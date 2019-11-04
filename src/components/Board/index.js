@@ -7,7 +7,7 @@ class Board extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      content: 'X'
+      content: ''
     }
   }
 
@@ -17,26 +17,22 @@ class Board extends Component {
     })
   }
 
-  squareCollabs(qtd) {
-    let max = qtd;
-    const squares = [];
+  renderSquares = () => {
+    // return Array(9).fill(<Square 
+    //                   onClickChange={this.handleClick}
+    //                   content={this.state.content}  
+    //                   key={this.props.index}/>);
 
-    while(max--) {
-      squares.push(<Square 
-                  onClickChange={this.handleClick}
-                  content={this.state.content}  
-                  key={max}/>);
-    }
-  
-    return squares;
+    const squares = Array(9).fill();
+    return squares.map( (square, index) => {
+      return <Square onClickChange={this.handleClick} content={this.state.content} key={index} />
+    });
   }
 
   render() {
-    const qtd = this.props.qtd;
-
     return (
       <article className="board">
-        {this.squareCollabs(qtd)}
+        {this.renderSquares()}
       </article>
     );
   }

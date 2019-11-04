@@ -7,4 +7,5 @@
     font-size: 30px;
     color: #ff7675;
     cursor: pointer;
+    vertical-align: top; /* Alinha o texto baseline no topo */
 }
