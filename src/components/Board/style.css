@@ -1,4 +1,5 @@
 .board {
     border: 2px solid tomato;
     width: 300px;
+    float: left;
 }
