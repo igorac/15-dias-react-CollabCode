@@ -1,11 +1,15 @@
 import React from 'react';
-import Game from './components/Game'
-
+import NextPlayer from './components/NextPlayer';
+import Board from './components/Board';
+import GameWrapper from './components/GameWrapper';
 
 
 function App() {
   return (
-    <Game />
+    <GameWrapper>
+      <NextPlayer />
+      <Board qtd="9" />
+    </GameWrapper>
   );
 }
 

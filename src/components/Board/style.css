@@ -1,5 +1,5 @@
 .board {
-    border: 2px solid tomato;
-    width: 300px;
-    float: left;
+    width: 330px;
+    height: 330px;
+    display: inline-block;
 }

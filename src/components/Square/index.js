@@ -7,22 +7,20 @@ class Square extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      simbolo: '',
-      isNextX: true,
+      content: '',
     }
 
   }
 
   handleClick = () => {
-    this.setState({
-      simbolo: (this.state.isNextX) ? 'X' : 'O',
-      isNextX: !this.state.isNextX
-    })
+    const newState = {};
+    newState.content = (this.state.content === "X") ? 'O' : 'X';
+    this.setState(newState);
   }
 
   render() {
     return (
-      <button onClick={this.handleClick} className="square">{this.state.simbolo}</button>
+      <button onClick={this.handleClick} className="square">{this.state.content}</button>
     );
   }
 
