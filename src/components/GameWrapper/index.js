@@ -24,7 +24,6 @@ class GameWrapper extends Component {
     !squares[index] && (squares[index] = player);
     
     if (squares[index] !== '') {
-      console.log('1');
     }
 
 
