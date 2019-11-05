@@ -13,24 +13,25 @@ class GameWrapper extends Component {
     super(props);
     this.state = {
       player: 'X',
-      squares: Array(9).fill("")
+      squares: Array(9).fill(""),
+      // historico: []
     }
   }
 
   handleClick = (index) => {
     const { player, squares } = this.state;
 
-    console.log(!squares[index]);
-    !squares[index] && (squares[index] = player);
-    
-    if (squares[index] !== '') {
+    // Entra nessa condição, caso o square naquele indice esteja vazio.
+    if (!squares[index]) {
+      squares[index] = player;
+      this.setState({
+        player: (player === 'X') ? 'O' : 'X',
+        squares: squares,
+        // historico: [
+        //   {playerHist: player}
+        // ]
+      })
     }
-
-
-    this.setState({
-      player: (player === 'X') ? 'O' : 'X',
-      squares: squares
-    })
   }
 
   estadoInicial = () => {
@@ -50,7 +51,7 @@ class GameWrapper extends Component {
         <NextPlayer player={player} />
         <Board onClick={this.handleClick} squares={squares} />
         <StartGame onClick={this.estadoInicial} />
-        <Historico />
+        <Historico historico={this.state.historico}/>
       </main>
     );
   }

@@ -2,7 +2,10 @@ import React from 'react';
 
 import './style.css';
 
-const Historico = () => {
+
+
+const Historico = ({historico}) => {
+    console.log(historico);
     return (
         <ol className="historico">
             <li className="historico-item">X na 1x1</li>
