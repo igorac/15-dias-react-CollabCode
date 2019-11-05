@@ -2,7 +2,7 @@ import React from 'react';
 import './style.css';
 
 
-// {content} => props.content
+// {player} => props.player
 const Square = ({player, onClick}) => {
   return (
     <button onClick={onClick} className="square">

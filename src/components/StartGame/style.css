@@ -1,0 +1,12 @@
+.start-game {
+    border: 1px solid;
+    margin-top: 20px;
+    border: none;
+    background-color: #6c5ce7;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 10px;
+    border-radius: 5px;
+    width: 330px;
+    cursor: pointer;
+}
