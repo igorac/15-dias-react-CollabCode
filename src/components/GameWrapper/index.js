@@ -11,13 +11,20 @@ class GameWrapper extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      player: ''
+      player: 'X',
+      squares: Array(9).fill("")
     }
   }
 
-  handleClick = () => {
+  handleClick = (index) => {
+    const { player, squares } = this.state;
+    
+    !squares[index] && (squares[index] = player);
+    
+
     this.setState({
-      player: (this.state.player === 'X') ? 'O' : 'X'
+      player: (player === 'X') ? 'O' : 'X',
+      squares: squares
     })
   }
 
@@ -25,13 +32,12 @@ class GameWrapper extends Component {
   // ao clicar no square, ele vai fazer o fluxo de dentro para fora
   // do component filho (square) -> (board) -> (GameWrapper)
   render() {
+    const { player, squares } = this.state;
     return (
       <main className="game-wrapper">
-        <NextPlayer player={this.state.player} />
-        <div className="board-historico">
-          <Board onClick={this.handleClick} player={this.state.player}/>
-          <Historico />
-        </div>
+        <NextPlayer player={player} />
+        <Board onClick={this.handleClick} squares={squares}/>
+        <Historico />
       </main>
     );
   }

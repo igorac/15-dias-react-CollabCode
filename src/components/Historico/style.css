@@ -1,13 +1,19 @@
 .historico {
-    margin-left: 10px;
+    list-style: none;
+    padding: 0;
 }
-.historico button {
-    border: none;
-    outline: none;
-    background-color: #6c5ce7;
-    color: #fff;
-    padding: 5px 15px;
+.historico-item {
+    width: 300px;
+    font-family: 'Comfortaa', cursive, sans-serif;
+    padding: 10px 15px;
+    margin: 10px auto;
     border-radius: 5px;
     font-size: 1.2rem;
-    cursor: pointer;
+    background-color: #dfe6e9;
+    color: #6c5ce7;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+}
+.historico-item:nth-child(odd) {
+    background-color: #6c5ce7;
+    color: #fff;
 }

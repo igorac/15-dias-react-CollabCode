@@ -4,9 +4,14 @@ import './style.css';
 
 const Historico = () => {
     return (
-        <div className="historico">
-            <button>Começar</button>
-        </div>
+        <ol className="historico">
+            <li className="historico-item">X na 1x1</li>
+            <li className="historico-item">X na 1x1</li>
+            <li className="historico-item">X na 1x1</li>
+            <li className="historico-item">X na 1x1</li>
+            <li className="historico-item">X na 1x1</li>
+            <li className="historico-item">X na 1x1</li>
+        </ol>
     );
 }
 

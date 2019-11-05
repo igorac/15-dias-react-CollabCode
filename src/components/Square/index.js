@@ -3,9 +3,11 @@ import './style.css';
 
 
 // {content} => props.content
-const Square = ({content, onClick}) => {
+const Square = ({player, onClick}) => {
   return (
-    <button onClick={onClick} className="square">{content}</button>
+    <button onClick={onClick} className="square">
+      {player}
+    </button>
   );
 }
 
