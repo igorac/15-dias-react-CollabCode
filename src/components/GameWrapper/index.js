@@ -18,7 +18,7 @@ class GameWrapper extends Component {
 
   handleClick = (index) => {
     const { player, squares } = this.state;
-    
+
     !squares[index] && (squares[index] = player);
     
 
