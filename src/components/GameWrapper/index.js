@@ -14,7 +14,7 @@ class GameWrapper extends Component {
     this.state = {
       player: 'X',
       squares: Array(9).fill(""),
-      // historico: []
+      historico: []
     }
   }
 
@@ -27,9 +27,9 @@ class GameWrapper extends Component {
       this.setState({
         player: (player === 'X') ? 'O' : 'X',
         squares: squares,
-        // historico: [
-        //   {playerHist: player}
-        // ]
+        historico: [
+          {playerHist: player}
+        ]
       })
     }
   }
